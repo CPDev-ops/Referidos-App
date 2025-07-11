@@ -1,11 +1,18 @@
 import { FaGoogle, FaUser, FaEnvelope, FaLock } from "react-icons/fa";
 import Button from "../../../../shared/UI/Button";
 import InputField from "../ui/InputFIeld";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
+
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    navigate('/referring')
+  }
   return (
-    <form className="space-y-4 text-sm text-white">
+    <form onSubmit={handleSubmit} className="space-y-4 text-sm text-white">
       <p className=" text-center">Crear Cuenta de Referidor</p>
       {/* Google Login */}
       <button

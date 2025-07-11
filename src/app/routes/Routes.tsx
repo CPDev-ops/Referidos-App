@@ -15,13 +15,13 @@ export const RouterContainer = () => {
             <Routes>
                 <Route path='/' element={<RedirectModule route='/home' />} />
                 <Route path='/home' element={<PageHome />} />
+                <Route path='/login' element={<LoginPage />} />
                 <Route path='/register' element={<RegisterPage />} />
                 <Route path='/referring' element={<ReferralDashboardPage />} />
                 <Route path='/referring/info' element={<ReferProgramPage />} />
                 <Route path='/referring/progress' element={<ProgressPage />} />
                 <Route path='/referring/prizes' element={<RewardsPage />} />
                 <Route path='/referred' element={<ReferralWelcome />} />
-                <Route path='/login' element={<LoginPage />} />
                 <Route path='/test' element={<PageTest />} />
             </Routes>
         </div>

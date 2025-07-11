@@ -1,11 +1,18 @@
 import { FaGoogle, FaEnvelope, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import InputField from "../../register/ui/InputFIeld";
 import Button from "../../../../shared/UI/Button";
 
 const LoginForm = () => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        navigate('/referring')
+    }
+
     return (
-        <form className="space-y-4 text-sm text-white">
+        <form onSubmit={handleSubmit} className="space-y-4 text-sm text-white">
             <p className=" text-center">Iniciar Sesión</p>
 
             {/* Botón Google */}
