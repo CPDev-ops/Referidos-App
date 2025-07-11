@@ -1,7 +1,6 @@
-import { FaTimesCircle, FaInfoCircle, FaExclamationCircle, FaTimes } from "react-icons/fa";
+import { FaInfoCircle, FaExclamationCircle, FaTimes } from "react-icons/fa";
 import Button from "../../../shared/UI/Button";
 import { IoIosAlert } from "react-icons/io";
-import { BsViewList } from "react-icons/bs";
 import { MdOutlineRemoveRedEye, MdWhatsapp } from "react-icons/md";
 
 interface Props {
@@ -11,6 +10,8 @@ interface Props {
 }
 
 const ExistingClientNotice = ({ name, email, back }: Props) => {
+    console.log(name);
+
     return (
         <div className="bg-white relative text-gray-800 p-6 rounded-lg max-w-md w-full shadow-lg text-sm space-y-4">
             {/* Header */}

@@ -7,7 +7,7 @@ const LoginPage = () => {
     return (
         <ContainerPages className="bg-gradient-to-tr from-[#2d13a1] to-[#291191] text-white flex flex-col items-center justify-center space-y-6 px-4 py-8">
             {/* Botón de volver */}
-            <ButtonBack />
+            <ButtonBack route="/" />
             {/* Header */}
             <LoginHeader />
             {/* Formulario */}
